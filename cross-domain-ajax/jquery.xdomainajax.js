@@ -59,7 +59,8 @@ jQuery.ajax = (function(_ajax){
                             responseText: (data.results[0] || '')
                                 // YQL screws with <script>s
                                 // Get rid of them
-                                .replace(/<script[^>]+?\/>|<script(.|\s)*?\/script>/gi, '')
+                                // not delete <script> tag
+                                //.replace(/<script[^>]+?\/>|<script(.|\s)*?\/script>/gi, '')
                         }, 'success');
                     }
                     
